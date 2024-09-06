@@ -1,14 +1,14 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"fmt"
-	"os"
-	"net/http"
 	"io"
+	"net/http"
+	"os"
+
 	"github.com/spf13/cobra"
 )
 
@@ -72,7 +72,7 @@ func init() {
 	// downloadCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	// Add a flag for the file to download
-	downloadCmd.Flags().StringP("path", "f", "", "The path to the file to download")
+	downloadCmd.Flags().StringP("path", "p", "", "The path to the file to download")
 	downloadCmd.Flags().StringP("url", "u", "", "The URL to download the file from")
 	downloadCmd.MarkFlagRequired("path")
 	downloadCmd.MarkFlagRequired("url")
